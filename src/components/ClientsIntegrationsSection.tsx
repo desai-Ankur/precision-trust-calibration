@@ -10,19 +10,29 @@ import {
   Atom,
   Scale,
   Settings,
-  CheckCircle2
+  CheckCircle2,
+  Building2,
+  Pill,
+  Plane,
+  Fuel,
+  Car,
+  Wrench
 } from "lucide-react";
 
 // Sample client/integration data - replace with actual client logos
 const clients = [
-  { name: "Tata Steel", industry: "Manufacturing" },
-  { name: "L&T", industry: "Engineering" },
-  { name: "Mahindra", industry: "Automotive" },
-  { name: "Dr. Reddy's", industry: "Pharmaceuticals" },
-  { name: "BHEL", industry: "Power & Energy" },
-  { name: "IOCL", industry: "Oil & Gas" },
-  { name: "HAL", industry: "Aerospace" },
-  { name: "Cipla", industry: "Pharmaceuticals" },
+  { name: "Tata Steel", industry: "Manufacturing", icon: Factory },
+  { name: "L&T", industry: "Engineering", icon: Wrench },
+  { name: "Mahindra", industry: "Automotive", icon: Car },
+  { name: "Dr. Reddy's", industry: "Pharmaceuticals", icon: Pill },
+  { name: "BHEL", industry: "Power & Energy", icon: Zap },
+  { name: "IOCL", industry: "Oil & Gas", icon: Fuel },
+  { name: "HAL", industry: "Aerospace", icon: Plane },
+  { name: "Cipla", industry: "Pharmaceuticals", icon: Beaker },
+  { name: "Reliance", industry: "Conglomerate", icon: Building2 },
+  { name: "Adani", industry: "Infrastructure", icon: Factory },
+  { name: "JSW Steel", industry: "Manufacturing", icon: Cog },
+  { name: "Glenmark", industry: "Pharmaceuticals", icon: Pill },
 ];
 
 const integrationFeatures = [
@@ -33,6 +43,30 @@ const integrationFeatures = [
   { icon: Beaker, label: "Lab Instruments" },
   { icon: Cog, label: "Mechanical Gauges" },
 ];
+
+// Logo Carousel Item
+const LogoCard = ({ client }: { client: typeof clients[0] }) => {
+  const Icon = client.icon;
+  return (
+    <div className="flex-shrink-0 w-48 mx-4 group">
+      <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-soft">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-14 h-14 rounded-xl bg-secondary/50 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
+            <Icon className="w-7 h-7 text-primary/70 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
+          </div>
+          <div className="text-center">
+            <h3 className="font-display font-semibold text-foreground text-sm group-hover:text-primary transition-colors">
+              {client.name}
+            </h3>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              {client.industry}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 // Floating icon component for decorative elements
 const FloatingIcon = ({ 
@@ -70,6 +104,9 @@ const FloatingIcon = ({
 export const ClientsIntegrationsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Duplicate clients for seamless infinite scroll
+  const duplicatedClients = [...clients, ...clients];
 
   return (
     <section id="clients" className="py-24 lg:py-32 relative overflow-hidden bg-background">
@@ -150,50 +187,26 @@ export const ClientsIntegrationsSection = () => {
           ))}
         </motion.div>
 
-        {/* Clients Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 mb-16">
-          {clients.map((client, index) => (
-            <motion.div
-              key={client.name}
-              initial={{ opacity: 0, y: 30, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ 
-                duration: 0.5, 
-                delay: 0.4 + index * 0.08,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                scale: 1.03, 
-                y: -4,
-                transition: { duration: 0.2 }
-              }}
-              className="group relative"
-            >
-              <div className="relative p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden">
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div className="relative z-10 text-center">
-                  {/* Logo placeholder - replace with actual logos */}
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-secondary/50 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
-                    <Factory className="w-8 h-8 text-primary/70 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
-                  </div>
-                  
-                  <h3 className="font-display font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
-                    {client.name}
-                  </h3>
-                  <p className="text-xs text-muted-foreground">
-                    {client.industry}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Infinite Logo Carousel */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="relative mb-16"
+        >
+          {/* Gradient fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+          
+          {/* Carousel container */}
+          <div className="overflow-hidden">
+            <div className="flex animate-scroll hover:pause-animation">
+              {duplicatedClients.map((client, index) => (
+                <LogoCard key={`${client.name}-${index}`} client={client} />
+              ))}
+            </div>
+          </div>
+        </motion.div>
 
         {/* Stats/Trust Indicators */}
         <motion.div
