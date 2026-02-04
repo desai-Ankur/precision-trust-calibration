@@ -164,4 +164,26 @@
     @apply bg-card/80 backdrop-blur-xl border border-border/50;
     box-shadow: var(--shadow-card);
   }
+
+  /* Infinite scroll animation for logo carousel */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  .hover\:pause-animation:hover {
+    animation-play-state: paused;
+  }
 }
