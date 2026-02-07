@@ -165,6 +165,16 @@
     box-shadow: var(--shadow-card);
   }
 
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Infinite scroll animation for logo carousel */
   @keyframes scroll {
     0% {

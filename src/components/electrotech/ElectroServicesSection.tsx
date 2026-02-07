@@ -5,30 +5,31 @@ import {
   CircleDot, Radio, Battery, Timer, Waves,
   Settings, AlertCircle, BarChart3, Cpu
 } from "lucide-react";
+import { HorizontalScroll, ScrollCard } from "@/components/ui/horizontal-scroll";
 
 const services = [
-  { name: "Multimeter", icon: Gauge, description: "Digital & analog multimeter calibration" },
-  { name: "Clamp Meter", icon: CircleDot, description: "Current clamp calibration services" },
-  { name: "Insulation Tester (Megger)", icon: AlertCircle, description: "High resistance measurement calibration" },
-  { name: "AC/DC Volt Meter", icon: Zap, description: "Voltage measurement calibration" },
-  { name: "AC/DC Ampere Meter", icon: Activity, description: "Current measurement calibration" },
-  { name: "Power Meter", icon: Battery, description: "Power measurement calibration" },
-  { name: "Resistance Meter", icon: Radio, description: "Resistance measurement calibration" },
-  { name: "Capacitance Meter", icon: Cpu, description: "Capacitance measurement calibration" },
-  { name: "Frequency Meter", icon: Waves, description: "Frequency measurement calibration" },
-  { name: "Watt / Power Meter", icon: BarChart3, description: "Wattage & power calibration" },
-  { name: "Temperature Calibrator", icon: Thermometer, description: "Temperature source calibration" },
-  { name: "Time Totalizer", icon: Timer, description: "Time measurement calibration" },
-  { name: "Leakage Tester", icon: AlertCircle, description: "Leakage current calibration" },
+  { name: "Multimeter", icon: Gauge, description: "Digital & analog multimeter calibration with certified accuracy" },
+  { name: "Clamp Meter", icon: CircleDot, description: "Current clamp calibration for safe electrical measurement" },
+  { name: "Insulation Tester (Megger)", icon: AlertCircle, description: "High resistance measurement calibration services" },
+  { name: "AC/DC Volt Meter", icon: Zap, description: "Voltage measurement calibration & verification" },
+  { name: "AC/DC Ampere Meter", icon: Activity, description: "Current measurement calibration services" },
+  { name: "Power Meter", icon: Battery, description: "Power measurement calibration & testing" },
+  { name: "Resistance Meter", icon: Radio, description: "Precision resistance measurement calibration" },
+  { name: "Capacitance Meter", icon: Cpu, description: "Capacitance measurement calibration services" },
+  { name: "Frequency Meter", icon: Waves, description: "Frequency measurement calibration & testing" },
+  { name: "Watt / Power Meter", icon: BarChart3, description: "Wattage & power calibration services" },
+  { name: "Temperature Calibrator", icon: Thermometer, description: "Temperature source calibration & verification" },
+  { name: "Time Totalizer", icon: Timer, description: "Time measurement calibration services" },
+  { name: "Leakage Tester", icon: AlertCircle, description: "Leakage current calibration & testing" },
   { name: "LCR Meter", icon: Settings, description: "Inductance, capacitance, resistance calibration" },
-  { name: "Stop Watch / Digital Timer", icon: Clock, description: "Time interval calibration" },
-  { name: "mV / mA Loop Calibrator", icon: Activity, description: "Process loop calibration" },
-  { name: "Multi-Function Calibrator", icon: Settings, description: "Multi-parameter calibration" },
+  { name: "Stop Watch / Digital Timer", icon: Clock, description: "Time interval calibration services" },
+  { name: "mV / mA Loop Calibrator", icon: Activity, description: "Process loop calibration & verification" },
+  { name: "Multi-Function Calibrator", icon: Settings, description: "Multi-parameter calibration services" },
   { name: "Temperature Indicator", icon: Thermometer, description: "Temperature display calibration" },
-  { name: "Earth Resistance Tester", icon: Radio, description: "Ground resistance calibration" },
+  { name: "Earth Resistance Tester", icon: Radio, description: "Ground resistance calibration services" },
   { name: "Energy Meter", icon: Battery, description: "Energy consumption calibration" },
-  { name: "Chart Recorder", icon: BarChart3, description: "Data recording calibration" },
-  { name: "Temperature Controller / Simulation", icon: Thermometer, description: "Controller calibration & simulation" },
+  { name: "Chart Recorder", icon: BarChart3, description: "Data recording device calibration" },
+  { name: "Temperature Controller", icon: Thermometer, description: "Controller calibration & simulation" },
   { name: "Loop Power Calibrator", icon: Zap, description: "Loop-powered instrument calibration" },
 ];
 
@@ -36,28 +37,38 @@ const ServiceCard = ({ service, index }: { service: typeof services[0]; index: n
   const Icon = service.icon;
   
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.03 }}
-      className="group relative p-5 rounded-2xl bg-card border border-border/50 hover:border-accent/50 hover:shadow-elevated transition-all duration-300"
-    >
-      {/* Hover Glow Effect */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
-      <div className="relative z-10">
-        <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-          <Icon className="w-6 h-6 text-primary-foreground" />
+    <ScrollCard index={index}>
+      <div className="group relative h-full p-6 rounded-2xl bg-card border border-border/50 hover:border-accent/50 hover:shadow-elevated transition-all duration-300">
+        {/* Hover Glow Effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        {/* Icon Badge */}
+        <div className="relative z-10">
+          <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <Icon className="w-7 h-7 text-primary-foreground" />
+          </div>
+          
+          {/* Content */}
+          <h3 className="font-display font-semibold text-lg text-foreground mb-3 group-hover:text-accent transition-colors duration-200">
+            {service.name}
+          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+            {service.description}
+          </p>
+          
+          {/* Subtle Learn More Indicator */}
+          <div className="mt-4 flex items-center gap-2 text-xs font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span>Learn more</span>
+            <motion.span
+              animate={{ x: [0, 4, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              →
+            </motion.span>
+          </div>
         </div>
-        <h3 className="font-display font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
-          {service.name}
-        </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {service.description}
-        </p>
       </div>
-    </motion.div>
+    </ScrollCard>
   );
 };
 
@@ -76,8 +87,8 @@ export const ElectroServicesSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-center max-w-3xl mx-auto mb-12"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 mb-6">
             <Zap className="w-4 h-4 text-accent" />
@@ -91,21 +102,43 @@ export const ElectroServicesSection = () => {
             Comprehensive calibration services for a wide range of electrical and electronic 
             measuring instruments, ensuring precision and compliance with industry standards.
           </p>
+          
+          {/* Scroll Hint */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.4 }}
+            className="mt-4 text-sm text-muted-foreground/70 flex items-center justify-center gap-2"
+          >
+            <span>Swipe or drag to explore</span>
+            <motion.span
+              animate={{ x: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              →
+            </motion.span>
+          </motion.p>
         </motion.div>
 
-        {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} />
-          ))}
-        </div>
+        {/* Horizontal Scroll Services */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <HorizontalScroll>
+            {services.map((service, index) => (
+              <ServiceCard key={index} service={service} index={index} />
+            ))}
+          </HorizontalScroll>
+        </motion.div>
 
         {/* Total Count Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-center mt-12"
+          className="text-center mt-10"
         >
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elevated">
             <Zap className="w-5 h-5" />
