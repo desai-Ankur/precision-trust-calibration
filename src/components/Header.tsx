@@ -2,17 +2,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
-  { label: "Accreditations", href: "#accreditations" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/#industries" },
+  { label: "Accreditations", href: "/#accreditations" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <motion.header
@@ -24,7 +26,7 @@ export const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-soft group-hover:shadow-elevated transition-shadow duration-300">
               <span className="text-primary-foreground font-display font-bold text-lg">IQ</span>
             </div>
@@ -32,28 +34,46 @@ export const Header = () => {
               <span className="font-display font-bold text-lg leading-tight text-foreground">IQCL</span>
               <span className="text-[10px] text-muted-foreground leading-tight tracking-wide">Calibration LLP</span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-secondary/50"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isExternal = item.href.startsWith("/#");
+              const isActive = location.pathname === item.href || 
+                (item.href === "/services" && location.pathname.startsWith("/services"));
+              
+              return isExternal ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-secondary/50 ${
+                    isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-secondary/50 ${
+                    isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Get Quote
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/#contact">Get Quote</Link>
             </Button>
-            <Button variant="default" size="sm">
-              Request Calibration
+            <Button variant="default" size="sm" asChild>
+              <Link to="/services">View Services</Link>
             </Button>
           </div>
 
@@ -78,22 +98,34 @@ export const Header = () => {
             className="lg:hidden border-t border-border bg-background"
           >
             <div className="container mx-auto px-6 py-6 space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block py-3 text-foreground font-medium hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isExternal = item.href.startsWith("/#");
+                return isExternal ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block py-3 text-foreground font-medium hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block py-3 text-foreground font-medium hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <div className="pt-4 flex flex-col gap-3">
-                <Button variant="outline" className="w-full">
-                  Get Quote
+                <Button variant="outline" className="w-full" asChild>
+                  <Link to="/#contact" onClick={() => setIsOpen(false)}>Get Quote</Link>
                 </Button>
-                <Button variant="default" className="w-full">
-                  Request Calibration
+                <Button variant="default" className="w-full" asChild>
+                  <Link to="/services" onClick={() => setIsOpen(false)}>View Services</Link>
                 </Button>
               </div>
             </div>
