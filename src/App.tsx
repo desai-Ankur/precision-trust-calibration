@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Services from "./pages/Services";
 import MechanicalCalibration from "./pages/MechanicalCalibration";
 import ElectroTech from "./pages/ElectroTech";
 import PressureCalibration from "./pages/PressureCalibration";
@@ -19,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/services/mechanical-calibration" element={<MechanicalCalibration />} />
           <Route path="/services/electro-tech" element={<ElectroTech />} />
           <Route path="/services/pressure-calibration" element={<PressureCalibration />} />
