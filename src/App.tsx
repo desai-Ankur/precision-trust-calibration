@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import MechanicalCalibration from "./pages/MechanicalCalibration";
 import ElectroTech from "./pages/ElectroTech";
 import PressureCalibration from "./pages/PressureCalibration";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/mechanical-calibration" element={<MechanicalCalibration />} />
           <Route path="/services/electro-tech" element={<ElectroTech />} />

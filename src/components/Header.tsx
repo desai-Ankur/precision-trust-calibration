@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/#industries" },
   { label: "Accreditations", href: "/#accreditations" },
