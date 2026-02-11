@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import MechanicalCalibration from "./pages/MechanicalCalibration";
 import ElectroTech from "./pages/ElectroTech";
 import PressureCalibration from "./pages/PressureCalibration";
+import FluidFlow from "./pages/FluidFlow";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/services/mechanical-calibration" element={<MechanicalCalibration />} />
           <Route path="/services/electro-tech" element={<ElectroTech />} />
           <Route path="/services/pressure-calibration" element={<PressureCalibration />} />
+          <Route path="/services/fluid-flow" element={<FluidFlow />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
