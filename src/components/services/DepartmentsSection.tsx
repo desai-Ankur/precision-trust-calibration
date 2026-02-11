@@ -112,6 +112,7 @@ const departments = [
     icon: Wind,
     color: "from-violet-900/20 to-purple-900/20",
     accentColor: "bg-gradient-to-br from-violet-500 to-purple-500",
+    link: "/services/fluid-flow",
     instruments: [
       "Rota Meter",
       "Top Loading Calibrator",
