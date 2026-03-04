@@ -9,7 +9,7 @@ const navItems = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/#industries" },
   { label: "Accreditations", href: "/#accreditations" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const Header = () => {
@@ -70,7 +70,7 @@ export const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="ghost" size="sm" asChild>
-              <Link to="/#contact">Get Quote</Link>
+              <Link to="/contact">Get Quote</Link>
             </Button>
             <Button variant="default" size="sm" asChild>
               <Link to="/services">View Services</Link>
@@ -122,7 +122,7 @@ export const Header = () => {
               })}
               <div className="pt-4 flex flex-col gap-3">
                 <Button variant="outline" className="w-full" asChild>
-                  <Link to="/#contact" onClick={() => setIsOpen(false)}>Get Quote</Link>
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>Get Quote</Link>
                 </Button>
                 <Button variant="default" className="w-full" asChild>
                   <Link to="/services" onClick={() => setIsOpen(false)}>View Services</Link>
