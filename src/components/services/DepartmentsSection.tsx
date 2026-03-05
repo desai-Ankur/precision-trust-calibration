@@ -142,6 +142,7 @@ const departments = [
     icon: Thermometer,
     color: "from-rose-900/20 to-pink-900/20",
     accentColor: "bg-gradient-to-br from-rose-500 to-pink-500",
+    link: "/services/thermal-calibration",
     instruments: [
       "RTD Sensor",
       "Thermocouple Sensor",
