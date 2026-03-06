@@ -10,6 +10,7 @@ import ElectroTech from "./pages/ElectroTech";
 import PressureCalibration from "./pages/PressureCalibration";
 import FluidFlow from "./pages/FluidFlow";
 import ThermalCalibration from "./pages/ThermalCalibration";
+import LabInstruments from "./pages/LabInstruments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
