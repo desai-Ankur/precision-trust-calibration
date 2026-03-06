@@ -10,6 +10,7 @@ import ElectroTech from "./pages/ElectroTech";
 import PressureCalibration from "./pages/PressureCalibration";
 import FluidFlow from "./pages/FluidFlow";
 import ThermalCalibration from "./pages/ThermalCalibration";
+import LabInstruments from "./pages/LabInstruments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/services/pressure-calibration" element={<PressureCalibration />} />
           <Route path="/services/fluid-flow" element={<FluidFlow />} />
           <Route path="/services/thermal-calibration" element={<ThermalCalibration />} />
+          <Route path="/services/lab-instruments" element={<LabInstruments />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

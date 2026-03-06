@@ -166,6 +166,7 @@ const departments = [
     icon: FlaskConical,
     color: "from-indigo-900/20 to-blue-900/20",
     accentColor: "bg-gradient-to-br from-indigo-500 to-blue-500",
+    link: "/services/lab-instruments",
     instruments: [
       "Muffle Furnace",
       "COD Incubator",
