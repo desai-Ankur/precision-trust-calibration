@@ -92,9 +92,9 @@ export const AboutSection = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Instrument Quality Calibration LLP (IQCL) is a premier calibration laboratory
-              headquartered in India. Accredited by NABL under ISO/IEC 17025:2017, we specialize
-              in providing precision calibration services across multiple disciplines.
+              Established in 1983, IQCL Instrument Quality Calibration LLP is a premier calibration laboratory
+              headquartered in Ahmedabad, Gujarat. Accredited by NABL under ISO/IEC 17025:2017, we specialize
+              in providing precision calibration, repairing, and rental services across multiple disciplines.
             </p>
 
             {/* Image showcase */}
