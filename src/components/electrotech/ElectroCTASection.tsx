@@ -93,13 +93,13 @@ export const ElectroCTASection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white/60"
           >
-            <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="tel:+917912345678" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
-              <span>+91 123 456 7890</span>
+              <span>+91 79 1234 5678</span>
             </a>
-            <a href="mailto:info@iqcl.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:info@iqcl.in" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="w-4 h-4" />
-              <span>electrotech@iqcl.com</span>
+              <span>info@iqcl.in</span>
             </a>
           </motion.div>
         </div>
