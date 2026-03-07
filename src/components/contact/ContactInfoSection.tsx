@@ -6,12 +6,12 @@ const contactCards = [
   {
     icon: MapPin,
     title: "Office Address",
-    lines: ["IQCL Laboratory", "Industrial Area, Mumbai", "Maharashtra, India"],
+    lines: ["4th Floor, Shop 416, Maruti Plaza", "Krishna Nagar Road, Ahmedabad-382345", "Gujarat, India"],
   },
   {
     icon: Phone,
     title: "Phone Number",
-    lines: ["+91 22 1234 5678", "+91 98765 43210"],
+    lines: ["+91 79 1234 5678", "+91 98765 43210"],
   },
   {
     icon: Mail,

@@ -123,10 +123,10 @@ export const AboutSection = () => {
               transition={{ delay: 0.4 }}
             >
               <div className="text-center">
-                <div className="font-display text-3xl lg:text-4xl font-bold text-primary">
-                  {prefersReducedMotion ? 15 : yearsCount}+
-                </div>
-                <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
+                 <div className="font-display text-3xl lg:text-4xl font-bold text-primary">
+                  {prefersReducedMotion ? 40 : yearsCount}+
+                 </div>
+                 <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
               </div>
               <div className="text-center border-x border-border">
                 <div className="font-display text-3xl lg:text-4xl font-bold text-primary">

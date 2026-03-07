@@ -139,7 +139,7 @@ export const ServicesHeroSection = () => {
               { value: "7", label: "Departments" },
               { value: "150+", label: "Instrument Types" },
               { value: "50,000+", label: "Calibrations/Year" },
-              { value: "15+", label: "Years Excellence" },
+              { value: "40+", label: "Years Excellence" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

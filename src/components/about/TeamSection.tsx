@@ -3,10 +3,10 @@ import { useRef, useState, useEffect } from "react";
 import { Linkedin } from "lucide-react";
 
 const team = [
-  { name: "Rajesh Sharma", role: "Managing Director", initials: "RS", bio: "25+ years in metrology and quality management. Leads IQCL's strategic vision." },
-  { name: "Priya Desai", role: "Head of Operations", initials: "PD", bio: "Expert in calibration lab operations and ISO compliance frameworks." },
-  { name: "Amit Kulkarni", role: "Chief Metrologist", initials: "AK", bio: "Specialist in mechanical and dimensional calibration with 20 years of experience." },
-  { name: "Sneha Patil", role: "Quality Manager", initials: "SP", bio: "Ensures all calibrations meet NABL standards and customer requirements." },
+  { name: "Sanjay Patel", role: "CEO & Managing Partner", initials: "SP", bio: "Leads IQCL's strategic vision with decades of expertise in metrology and quality management." },
+  { name: "Snehalben S. Patel", role: "Partner", initials: "SS", bio: "Key partner contributing to IQCL's growth and operational excellence in calibration services." },
+  { name: "Bhagvatiben M. Patel", role: "Partner", initials: "BP", bio: "Partner ensuring quality standards and compliance across all calibration departments." },
+  { name: "Kaminiben M. Patel", role: "Partner", initials: "KP", bio: "Partner overseeing business operations and client relationship management." },
 ];
 
 export const TeamSection = () => {

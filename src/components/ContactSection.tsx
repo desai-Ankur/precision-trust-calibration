@@ -145,7 +145,7 @@ export const ContactSection = () => {
                   asChild
                   className="group"
                 >
-                  <a href="tel:+912212345678" className="inline-flex items-center gap-2">
+                  <a href="tel:+917912345678" className="inline-flex items-center gap-2">
                     <Phone className="w-4 h-4" />
                     Call Now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

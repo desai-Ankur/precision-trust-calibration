@@ -106,8 +106,8 @@ export const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
-                IQCL is a premier calibration laboratory accredited with ISO/IEC 17025:2017.
-                We deliver accurate, traceable calibration services that meet international standards.
+                IQCL Instrument Quality Calibration LLP, established in 1983, is a premier calibration laboratory accredited with ISO/IEC 17025:2017.
+                With over four decades of experience, we deliver accurate, traceable calibration services that meet international standards.
               </motion.p>
             </div>
 

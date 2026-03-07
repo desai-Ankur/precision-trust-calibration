@@ -53,16 +53,16 @@ export const Footer = () => {
             </div>
             <p className="text-primary-foreground/70 text-sm max-w-xs">
               Premier calibration laboratory accredited with ISO/IEC 17025:2017. 
-              Delivering precision and quality since 2008.
+              Delivering precision and quality since 1983.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>4th Floor, Shop 416, Maruti Plaza, Krishna Nagar Road, Ahmedabad-382345, Gujarat, India</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+91 22 1234 5678</span>
+                <span>+91 79 1234 5678</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Mail className="w-4 h-4 flex-shrink-0" />

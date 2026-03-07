@@ -15,7 +15,7 @@ export const ContactMapSection = () => {
           className="text-center mb-10"
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">Find Us</h2>
-          <p className="text-muted-foreground mt-2">Visit our state-of-the-art calibration laboratory</p>
+          <p className="text-muted-foreground mt-2">Visit our calibration laboratory at Maruti Plaza, Krishna Nagar Road, Ahmedabad</p>
         </motion.div>
 
         <motion.div

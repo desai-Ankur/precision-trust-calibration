@@ -66,7 +66,7 @@ export const AboutOverviewSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 py-6 border-y border-border">
               {[
-                { val: rm ? 15 : years, suffix: "+", label: "Years" },
+                { val: rm ? 40 : years, suffix: "+", label: "Years" },
                 { val: rm ? 500 : clients, suffix: "+", label: "Clients" },
                 { val: rm ? 50 : calibrations, suffix: "K+", label: "Calibrations" },
               ].map((s) => (

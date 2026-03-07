@@ -28,7 +28,7 @@ const reasons = [
     icon: Users,
     title: "Expert Team",
     description: "Our team of qualified metrologists brings decades of experience across diverse calibration disciplines.",
-    highlight: "15+ Years Exp",
+    highlight: "40+ Years Exp",
     color: "primary",
   },
 ];
