@@ -171,7 +171,7 @@ export const WhyChooseUs = () => {
                 >
                   <div className="flex items-center gap-4">
                     <div className="flex -space-x-2">
-                      {["R", "P", "A", "S"].map((initial, i) => (
+                      {["S", "Sn", "B", "K"].map((initial, i) => (
                         <motion.div
                           key={i}
                           className="w-10 h-10 rounded-full bg-gradient-primary border-2 border-primary-foreground/20 flex items-center justify-center shadow-soft"

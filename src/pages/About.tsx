@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { AboutHeroSection } from "@/components/about/AboutHeroSection";
 import { AboutOverviewSection } from "@/components/about/AboutOverviewSection";
 import { VisionMissionSection } from "@/components/about/VisionMissionSection";
+import { CompanyInfoSection } from "@/components/about/CompanyInfoSection";
 import { JourneyTimelineSection } from "@/components/about/JourneyTimelineSection";
 import { ExpertiseSection } from "@/components/about/ExpertiseSection";
 import { AboutIndustriesSection } from "@/components/about/AboutIndustriesSection";
@@ -18,6 +19,7 @@ const About = () => (
       <AboutHeroSection />
       <AboutOverviewSection />
       <VisionMissionSection />
+      <CompanyInfoSection />
       <JourneyTimelineSection />
       <ExpertiseSection />
       <AboutIndustriesSection />
