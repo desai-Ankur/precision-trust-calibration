@@ -9,7 +9,7 @@ import labElectrotech from "@/assets/lab-electrotech.png";
 
 const stats = [
   { icon: Shield, value: "ISO 17025", label: "Accredited" },
-  { icon: Award, value: "15+", label: "Years Experience" },
+  { icon: Award, value: "40+", label: "Years Experience" },
   { icon: Clock, value: "48hrs", label: "Fast Turnaround" },
 ];
 
