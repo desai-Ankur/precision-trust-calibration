@@ -32,7 +32,7 @@ export const AboutOverviewSection = () => {
   const [rm, setRm] = useState(false);
   useEffect(() => { setRm(window.matchMedia("(prefers-reduced-motion: reduce)").matches); }, []);
 
-  const years = useCounter(15, 2, inView);
+  const years = useCounter(40, 2, inView);
   const clients = useCounter(500, 2.5, inView);
   const calibrations = useCounter(50, 2, inView);
 
