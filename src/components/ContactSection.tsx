@@ -15,12 +15,12 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "IQCL Laboratory, Industrial Area, Mumbai, Maharashtra, India",
+    value: "4th Floor, Shop 416, Maruti Plaza, Krishna Nagar Road, Ahmedabad-382345, Gujarat, India",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 22 1234 5678",
+    value: "+91 79 1234 5678",
   },
   {
     icon: Mail,
@@ -145,7 +145,7 @@ export const ContactSection = () => {
                   asChild
                   className="group"
                 >
-                  <a href="tel:+912212345678" className="inline-flex items-center gap-2">
+                  <a href="tel:+917912345678" className="inline-flex items-center gap-2">
                     <Phone className="w-4 h-4" />
                     Call Now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

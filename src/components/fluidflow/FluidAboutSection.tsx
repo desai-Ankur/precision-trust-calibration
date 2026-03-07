@@ -94,7 +94,7 @@ export const FluidAboutSection = () => {
           >
             {[
               { icon: Droplets, value: 20, suffix: "+", label: "Instrument Types", color: "text-accent" },
-              { icon: Award, value: 15, suffix: "+", label: "Years Experience", color: "text-primary" },
+              { icon: Award, value: 40, suffix: "+", label: "Years Experience", color: "text-primary" },
               { icon: Shield, value: 99, suffix: ".9%", label: "Accuracy Rate", color: "text-accent" },
               { icon: Wind, value: 3000, suffix: "+", label: "Instruments Calibrated", color: "text-primary" },
             ].map((stat, index) => (

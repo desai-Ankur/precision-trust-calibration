@@ -50,7 +50,7 @@ export const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
-  const yearsCount = useCounter(15, 2, isInView);
+  const yearsCount = useCounter(40, 2, isInView);
   const clientsCount = useCounter(500, 2.5, isInView);
   const instrumentsCount = useCounter(50, 2, isInView);
 
@@ -92,9 +92,9 @@ export const AboutSection = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Instrument Quality Calibration LLP (IQCL) is a premier calibration laboratory
-              headquartered in India. Accredited by NABL under ISO/IEC 17025:2017, we specialize
-              in providing precision calibration services across multiple disciplines.
+              Established in 1983, IQCL Instrument Quality Calibration LLP is a premier calibration laboratory
+              headquartered in Ahmedabad, Gujarat. Accredited by NABL under ISO/IEC 17025:2017, we specialize
+              in providing precision calibration, repairing, and rental services across multiple disciplines.
             </p>
 
             {/* Image showcase */}
@@ -123,10 +123,10 @@ export const AboutSection = () => {
               transition={{ delay: 0.4 }}
             >
               <div className="text-center">
-                <div className="font-display text-3xl lg:text-4xl font-bold text-primary">
-                  {prefersReducedMotion ? 15 : yearsCount}+
-                </div>
-                <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
+                 <div className="font-display text-3xl lg:text-4xl font-bold text-primary">
+                  {prefersReducedMotion ? 40 : yearsCount}+
+                 </div>
+                 <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
               </div>
               <div className="text-center border-x border-border">
                 <div className="font-display text-3xl lg:text-4xl font-bold text-primary">

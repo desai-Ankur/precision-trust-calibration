@@ -32,7 +32,7 @@ export const AboutOverviewSection = () => {
   const [rm, setRm] = useState(false);
   useEffect(() => { setRm(window.matchMedia("(prefers-reduced-motion: reduce)").matches); }, []);
 
-  const years = useCounter(15, 2, inView);
+  const years = useCounter(40, 2, inView);
   const clients = useCounter(500, 2.5, inView);
   const calibrations = useCounter(50, 2, inView);
 
@@ -57,15 +57,16 @@ export const AboutOverviewSection = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Instrument Quality Calibration LLP is a premier calibration laboratory headquartered in India. 
-              Accredited by NABL under ISO/IEC 17025:2017, we serve manufacturing, automotive, pharmaceutical, 
-              aerospace, and engineering sectors with precision calibration across 7 departments.
+              Established in 1983, IQCL Instrument Quality Calibration LLP is a premier calibration laboratory 
+              headquartered in Ahmedabad, Gujarat, India. Led by CEO Sanjay Patel, we are a NABL-accredited 
+              partnership firm serving manufacturing, automotive, pharmaceutical, aerospace, and engineering 
+              sectors with precision calibration, repairing, and rental services across 7 departments.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 py-6 border-y border-border">
               {[
-                { val: rm ? 15 : years, suffix: "+", label: "Years" },
+                { val: rm ? 40 : years, suffix: "+", label: "Years" },
                 { val: rm ? 500 : clients, suffix: "+", label: "Clients" },
                 { val: rm ? 50 : calibrations, suffix: "K+", label: "Calibrations" },
               ].map((s) => (

@@ -83,8 +83,8 @@ export const AboutHeroSection = () => {
             {...anim({ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } })}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            IQCL is a NABL-accredited calibration laboratory delivering certified accuracy 
-            and trusted results to industries across India since 2008.
+            IQCL Instrument Quality Calibration LLP is a NABL-accredited calibration laboratory 
+            delivering certified accuracy and trusted results to industries across India since 1983.
           </motion.p>
 
           <motion.div

@@ -11,7 +11,7 @@ const reasons = [
   {
     icon: Users,
     title: "Experienced Technicians",
-    description: "Our team of qualified professionals brings 15+ years of expertise in mechanical calibration and metrology.",
+    description: "Our team of qualified professionals brings 40+ years of expertise in mechanical calibration and metrology.",
   },
   {
     icon: Clock,

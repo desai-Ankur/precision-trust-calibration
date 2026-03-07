@@ -2,12 +2,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 const milestones = [
-  { year: "2008", title: "Foundation", description: "IQCL established with a vision to deliver precision calibration services to Indian industries." },
-  { year: "2012", title: "NABL Accreditation", description: "Achieved NABL accreditation under ISO/IEC 17025, cementing our credibility in the calibration industry." },
-  { year: "2015", title: "Multi-Department Expansion", description: "Expanded to 5 calibration departments: Mechanical, Electro-Tech, Pressure, Thermal, and Fluid Flow." },
-  { year: "2018", title: "500+ Clients Milestone", description: "Crossed 500 active clients across manufacturing, pharma, automotive, and aerospace sectors." },
-  { year: "2021", title: "Digital Transformation", description: "Implemented digital calibration workflows and automated certificate generation for faster turnaround." },
-  { year: "2024", title: "7 Departments Strong", description: "Now operating 7 specialized departments with 50,000+ calibrations completed and growing." },
+  { year: "1983", title: "Foundation", description: "IQCL Instrument Quality Calibration LLP established in Gujarat with a vision to deliver precision calibration services to Indian industries." },
+  { year: "1995", title: "Industry Recognition", description: "Became a trusted calibration partner for manufacturing and pharmaceutical sectors across Gujarat and Western India." },
+  { year: "2005", title: "Multi-Department Expansion", description: "Expanded services across Mechanical, Electro-Tech, Pressure, Thermal, and Fluid Flow calibration departments." },
+  { year: "2015", title: "NABL Accreditation", description: "Achieved NABL accreditation under ISO/IEC 17025:2017, cementing our credibility in the calibration industry." },
+  { year: "2020", title: "500+ Clients Milestone", description: "Crossed 500 active clients across manufacturing, pharma, automotive, and aerospace sectors with digital transformation." },
+  { year: "2024", title: "7 Departments Strong", description: "Now operating 7 specialized departments with 50,000+ calibrations completed, serving industries across India." },
 ];
 
 export const JourneyTimelineSection = () => {

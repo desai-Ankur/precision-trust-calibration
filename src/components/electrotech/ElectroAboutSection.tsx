@@ -94,7 +94,7 @@ export const ElectroAboutSection = () => {
           >
             {[
               { icon: Zap, value: 23, suffix: "+", label: "Instrument Types", color: "accent" },
-              { icon: Award, value: 15, suffix: "+", label: "Years Experience", color: "primary" },
+              { icon: Award, value: 40, suffix: "+", label: "Years Experience", color: "primary" },
               { icon: Shield, value: 99.9, suffix: "%", label: "Accuracy Rate", color: "success" },
               { icon: CheckCircle, value: 5000, suffix: "+", label: "Instruments Calibrated", color: "accent" },
             ].map((stat, index) => (

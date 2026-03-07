@@ -28,7 +28,7 @@ const AnimatedCounter = ({ end, suffix = "", duration = 2 }: { end: number; suff
 };
 
 const stats = [
-  { icon: Shield, value: 15, suffix: "+", label: "Years Experience" },
+  { icon: Shield, value: 40, suffix: "+", label: "Years Experience" },
   { icon: Award, value: 14, suffix: "+", label: "Instrument Types" },
   { icon: Target, value: 99.9, suffix: "%", label: "Accuracy Rate" },
   { icon: Gauge, value: 700, suffix: " bar", label: "Max Pressure Range" },
