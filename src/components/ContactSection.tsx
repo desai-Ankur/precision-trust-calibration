@@ -15,12 +15,12 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "IQCL Laboratory, Industrial Area, Mumbai, Maharashtra, India",
+    value: "4th Floor, Shop 416, Maruti Plaza, Krishna Nagar Road, Ahmedabad-382345, Gujarat, India",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 22 1234 5678",
+    value: "+91 79 1234 5678",
   },
   {
     icon: Mail,
