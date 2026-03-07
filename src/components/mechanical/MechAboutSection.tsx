@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from "react";
 import { Award, Target, Clock, Users } from "lucide-react";
 
 const stats = [
-  { icon: Award, value: 15, suffix: "+", label: "Years Experience" },
+  { icon: Award, value: 40, suffix: "+", label: "Years Experience" },
   { icon: Target, value: 27, suffix: "+", label: "Instrument Types" },
   { icon: Clock, value: 99.5, suffix: "%", label: "Accuracy Rate" },
   { icon: Users, value: 500, suffix: "+", label: "Clients Served" },

@@ -91,7 +91,7 @@ export const ThermalAboutSection = () => {
           >
             {[
               { icon: Thermometer, value: 14, suffix: "+", label: "Instrument Types", color: "text-destructive" },
-              { icon: Award, value: 15, suffix: "+", label: "Years Experience", color: "text-primary" },
+              { icon: Award, value: 40, suffix: "+", label: "Years Experience", color: "text-primary" },
               { icon: Shield, value: 99, suffix: ".9%", label: "Accuracy Rate", color: "text-accent" },
               { icon: Snowflake, value: 5000, suffix: "+", label: "Instruments Calibrated", color: "text-primary" },
             ].map((stat, index) => (

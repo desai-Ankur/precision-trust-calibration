@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: Users,
     title: "Experienced Technicians",
-    description: "Our team has 15+ years of expertise in pressure and vacuum calibration."
+    description: "Our team has 40+ years of expertise in pressure and vacuum calibration."
   },
   {
     icon: Clock,
