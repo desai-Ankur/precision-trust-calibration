@@ -10,6 +10,7 @@ import { ElectroCTASection } from "@/components/electrotech/ElectroCTASection";
 const ElectroTech = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <ElectroHeroSection />

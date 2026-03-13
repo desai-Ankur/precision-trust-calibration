@@ -11,6 +11,7 @@ import { LabCTASection } from "@/components/lab/LabCTASection";
 const LabInstruments = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <LabHeroSection />

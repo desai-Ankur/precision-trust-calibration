@@ -10,6 +10,7 @@ import { PressureCTASection } from "@/components/pressure/PressureCTASection";
 const PressureCalibration = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <PressureHeroSection />

@@ -12,6 +12,7 @@ import { MechCTASection } from "@/components/mechanical/MechCTASection";
 const MechanicalCalibration = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <MechHeroSection />

@@ -9,6 +9,7 @@ import { ServicesCTASection } from "@/components/services/ServicesCTASection";
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <ServicesHeroSection />

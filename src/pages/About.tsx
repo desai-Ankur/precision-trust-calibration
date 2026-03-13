@@ -15,6 +15,7 @@ import { AboutCTASection } from "@/components/about/AboutCTASection";
 
 const About = () => (
   <div className="min-h-screen bg-background">
+    <TopBar />
     <Header />
     <main>
       <AboutHeroSection />

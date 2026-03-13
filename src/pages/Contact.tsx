@@ -10,6 +10,7 @@ import { ContactCTASection } from "@/components/contact/ContactCTASection";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <ContactHeroSection />

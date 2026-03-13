@@ -11,6 +11,7 @@ import { FluidCTASection } from "@/components/fluidflow/FluidCTASection";
 const FluidFlow = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <FluidHeroSection />

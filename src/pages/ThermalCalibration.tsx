@@ -11,6 +11,7 @@ import { ThermalCTASection } from "@/components/thermal/ThermalCTASection";
 const ThermalCalibration = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <ThermalHeroSection />
