@@ -35,7 +35,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section ref={containerRef} className="relative min-h-screen flex items-center pt-20 pb-24 overflow-hidden">
       {/* Video Background */}
       <motion.div className="absolute inset-0" style={{ y: prefersReducedMotion ? 0 : backgroundY }}>
         <video

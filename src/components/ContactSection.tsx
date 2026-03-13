@@ -20,12 +20,12 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 79 1234 5678",
+    value: "9824040548",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@iqcl.in",
+    value: "iccahmedabad@gmail.com",
   },
   {
     icon: Clock,

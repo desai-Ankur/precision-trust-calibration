@@ -218,9 +218,9 @@ export const ClientsIntegrationsSection = () => {
           <div className="glass-card rounded-3xl p-8 lg:p-12">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
               {[
-                { value: "500+", label: "Clients Served", icon: CheckCircle2 },
+                { value: "1L+", label: "Clients Served", icon: CheckCircle2 },
                 { value: "40+", label: "Years Experience", icon: Settings },
-                { value: "50K+", label: "Instruments Calibrated", icon: Gauge },
+                { value: "1L+", label: "Instruments Calibrated", icon: Gauge },
                 { value: "99.9%", label: "Accuracy Rate", icon: Atom },
               ].map((stat, index) => (
                 <motion.div

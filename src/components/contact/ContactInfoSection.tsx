@@ -16,7 +16,7 @@ const contactCards = [
   {
     icon: Mail,
     title: "Email Address",
-    lines: ["info@iqcl.in", "calibration@iqcl.in"],
+    lines: ["iccahmedabad@gmail.com"],
   },
   {
     icon: Clock,
