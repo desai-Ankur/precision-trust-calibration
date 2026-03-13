@@ -105,9 +105,9 @@ export const ThermalCTASection = () => {
               <Phone className="w-4 h-4" />
               <span>+91 79 1234 5678</span>
             </a>
-            <a href="mailto:info@iqcl.in" className="flex items-center gap-2 hover:text-destructive transition-colors">
+            <a href="mailto:iccahmedabad@gmail.com" className="flex items-center gap-2 hover:text-destructive transition-colors">
               <Mail className="w-4 h-4" />
-              <span>info@iqcl.in</span>
+              <span>iccahmedabad@gmail.com</span>
             </a>
           </motion.div>
         </div>
