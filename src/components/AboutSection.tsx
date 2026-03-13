@@ -51,8 +51,8 @@ export const AboutSection = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const yearsCount = useCounter(40, 2, isInView);
-  const clientsCount = useCounter(500, 2.5, isInView);
-  const instrumentsCount = useCounter(50, 2, isInView);
+  const clientsCount = useCounter(100000, 2.5, isInView);
+  const instrumentsCount = useCounter(100000, 2, isInView);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -130,13 +130,13 @@ export const AboutSection = () => {
               </div>
               <div className="text-center border-x border-border">
                 <div className="font-display text-3xl lg:text-4xl font-bold text-primary">
-                  {prefersReducedMotion ? 500 : clientsCount}+
+                  {prefersReducedMotion ? "1" : Math.min(clientsCount, 100000) >= 100000 ? "1" : `${Math.floor(clientsCount / 1000)}K`}L+
                 </div>
                 <div className="text-sm text-muted-foreground mt-1">Clients Served</div>
               </div>
               <div className="text-center">
                 <div className="font-display text-3xl lg:text-4xl font-bold text-primary">
-                  {prefersReducedMotion ? 50 : instrumentsCount}K+
+                  {prefersReducedMotion ? "1" : instrumentsCount >= 100000 ? "1" : `${Math.floor(instrumentsCount / 1000)}K`}L+
                 </div>
                 <div className="text-sm text-muted-foreground mt-1">Calibrations</div>
               </div>

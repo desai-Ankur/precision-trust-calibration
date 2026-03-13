@@ -11,12 +11,12 @@ const contactCards = [
   {
     icon: Phone,
     title: "Phone Number",
-    lines: ["+91 79 1234 5678", "+91 98765 43210"],
+    lines: ["Office: 9824040548", "Director: 9925015461", "Technical: 7600505240"],
   },
   {
     icon: Mail,
     title: "Email Address",
-    lines: ["info@iqcl.in", "calibration@iqcl.in"],
+    lines: ["iccahmedabad@gmail.com"],
   },
   {
     icon: Clock,

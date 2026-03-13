@@ -1,3 +1,4 @@
+import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FluidHeroSection } from "@/components/fluidflow/FluidHeroSection";
@@ -10,6 +11,7 @@ import { FluidCTASection } from "@/components/fluidflow/FluidCTASection";
 const FluidFlow = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <FluidHeroSection />

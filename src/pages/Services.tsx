@@ -1,3 +1,4 @@
+import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ServicesHeroSection } from "@/components/services/ServicesHeroSection";
@@ -8,6 +9,7 @@ import { ServicesCTASection } from "@/components/services/ServicesCTASection";
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <ServicesHeroSection />

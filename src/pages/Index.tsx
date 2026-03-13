@@ -1,3 +1,4 @@
+import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { MarqueeSection } from "@/components/MarqueeSection";
@@ -14,6 +15,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <HeroSection />

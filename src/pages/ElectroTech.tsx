@@ -1,3 +1,4 @@
+import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ElectroHeroSection } from "@/components/electrotech/ElectroHeroSection";
@@ -9,6 +10,7 @@ import { ElectroCTASection } from "@/components/electrotech/ElectroCTASection";
 const ElectroTech = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header />
       <main>
         <ElectroHeroSection />

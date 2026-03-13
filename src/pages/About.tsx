@@ -1,3 +1,4 @@
+import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AboutHeroSection } from "@/components/about/AboutHeroSection";
@@ -14,6 +15,7 @@ import { AboutCTASection } from "@/components/about/AboutCTASection";
 
 const About = () => (
   <div className="min-h-screen bg-background">
+    <TopBar />
     <Header />
     <main>
       <AboutHeroSection />

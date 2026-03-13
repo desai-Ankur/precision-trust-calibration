@@ -184,7 +184,7 @@ export const WhyChooseUs = () => {
                       ))}
                     </div>
                     <div>
-                      <div className="font-semibold">500+ Happy Clients</div>
+                      <div className="font-semibold">1 Lakh+ Happy Clients</div>
                       <div className="text-sm text-primary-foreground/70">Across India</div>
                     </div>
                   </div>

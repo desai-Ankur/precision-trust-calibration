@@ -62,11 +62,19 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+91 79 1234 5678</span>
+                <span>Office: 9824040548</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                <span>Director: 9925015461</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                <span>Technical: 7600505240</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>info@iqcl.in</span>
+                <span>iccahmedabad@gmail.com</span>
               </div>
             </div>
           </div>
