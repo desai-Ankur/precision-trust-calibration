@@ -8,7 +8,7 @@ const socialLinks = [
 
 export const TopBar = () => {
   return (
-    <div className="bg-primary text-primary-foreground text-xs py-2 hidden md:block">
+    <div className="bg-primary text-primary-foreground text-xs py-2 hidden md:block fixed top-0 left-0 right-0 z-[60]">
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-5">
           <a href="tel:9824040548" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
