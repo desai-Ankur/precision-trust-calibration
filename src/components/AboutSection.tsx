@@ -51,8 +51,8 @@ export const AboutSection = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const yearsCount = useCounter(40, 2, isInView);
-  const clientsCount = useCounter(500, 2.5, isInView);
-  const instrumentsCount = useCounter(50, 2, isInView);
+  const clientsCount = useCounter(100000, 2.5, isInView);
+  const instrumentsCount = useCounter(100000, 2, isInView);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
