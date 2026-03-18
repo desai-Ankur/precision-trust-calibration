@@ -35,6 +35,7 @@ const App = () => (
           <Route path="/services/thermal-calibration" element={<ThermalCalibration />} />
           <Route path="/services/lab-instruments" element={<LabInstruments />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/certificates" element={<Certificates />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
