@@ -13,6 +13,7 @@ import ThermalCalibration from "./pages/ThermalCalibration";
 import LabInstruments from "./pages/LabInstruments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Certificates from "./pages/Certificates";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
