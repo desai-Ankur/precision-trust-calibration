@@ -13,6 +13,7 @@ import ThermalCalibration from "./pages/ThermalCalibration";
 import LabInstruments from "./pages/LabInstruments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Certificates from "./pages/Certificates";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/services/thermal-calibration" element={<ThermalCalibration />} />
           <Route path="/services/lab-instruments" element={<LabInstruments />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/certificates" element={<Certificates />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
