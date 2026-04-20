@@ -190,6 +190,7 @@ const departments = [
     icon: Scale,
     color: "from-cyan-900/20 to-sky-900/20",
     accentColor: "bg-gradient-to-br from-cyan-500 to-sky-500",
+    link: "/services/mass-weighing",
     instruments: [
       "Weighing Balance",
       "Weight Box",
